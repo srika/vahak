@@ -1,0 +1,160 @@
+@import "../mixins.scss";
+
+.bid-container {
+  &__content {
+    padding: 0 20px;
+    &__header {
+      margin-top: 30px;
+    }
+    &__card {
+      margin-top: 30px;
+    }
+  }
+}
+
+//header
+.header-section {
+  display: flex;
+  justify-content: center;
+  &__title {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: capitalize;
+    padding-bottom: 10px;
+    position: relative;
+    color: $title-color;
+  }
+  &__title::after {
+    content: "";
+    position: absolute;
+    width: 36%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    border-bottom: 4px solid $border-color;
+    right: 0;
+    margin: 0 auto;
+  }
+}
+
+//card
+.card-container {
+  border: 1px solid $card-border;
+  border-radius: 6px;
+  box-shadow: 0px 0px 30px $card-shadow-color;
+  opacity: 1;
+  &__header {
+    display: flex;
+    padding: 18px 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: $card-header;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    &__title {
+      font-size: 16px;
+      font-weight: bold;
+      color: $card-header-title-color;
+    }
+    &__sub-title {
+      margin-top: 6px;
+      font-size: 13px;
+      font-weight: normal;
+      color: $card-header-subtitle-color;
+    }
+  }
+
+  &__info {
+    padding: 20px 20px 10px 20px;
+    &__specifications {
+      &__list {
+        display: flex;
+        &__icon {
+          align-self: center;
+          width: 15px;
+          svg {
+            path {
+              fill: $default-icon-color;
+            }
+          }
+        }
+        &__info {
+          margin-left: 13px;
+          font-size: 15px;
+          font-weight: bold;
+          color: $description-color;
+        }
+      }
+    }
+    &__description {
+      margin-top: 14px;
+      font-size: 12px;
+      color: $description-color;
+    }
+  }
+  &__hide-details {
+    background: $card-hide-background;
+    padding: 7px 0;
+    display: flex;
+    justify-content: center;
+    &__label {
+      font-size: 12px;
+      font-weight: 600;
+      color: $subtitle-color;
+      opacity: 0.9;
+    }
+    &__icon {
+      margin-left: 11px;
+      align-self: center;
+      svg {
+        path {
+          fill: $subtitle-color;
+        }
+      }
+    }
+  }
+  &__show-details {
+    background: $card-hide-background;
+    padding: 7px 0;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: center;
+    &__label {
+      font-size: 12px;
+      font-weight: 600;
+      color: $subtitle-color;
+      opacity: 0.9;
+    }
+    &__icon {
+      margin-left: 11px;
+      align-self: center;
+      transform: rotate(180deg);
+    }
+  }
+  &__person-details {
+    display: flex;
+    padding: 15px 20px 20px 20px;
+    &__avatar {
+      .fa-6x {
+        width: 36px;
+        height: 36px;
+      }
+    }
+    &__info {
+      margin-left: 12px;
+      display: flex;
+      flex-direction: column;
+      &__name {
+        font-size: 15px;
+        font-weight: bold;
+        color: $description-color;
+      }
+      &__location {
+        font-size: 13px;
+        font-weight: normal;
+        color: $card-header-subtitle-color;
+      }
+    }
+  }
+}
