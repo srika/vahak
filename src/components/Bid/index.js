@@ -3,6 +3,7 @@ import React from "react";
 import Navbar from "../Navbar";
 import Header from "../Header";
 import Card from "../Card";
+import Form from "../Form";
 
 const Bid = () => {
   return (
@@ -14,6 +15,9 @@ const Bid = () => {
         </div>
         <div className="bid-container__content__card">
           <Card />
+        </div>
+        <div className="bid-container__content__form">
+        <Form />
         </div>
       </div>
     </div>
