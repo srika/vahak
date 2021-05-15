@@ -6,6 +6,9 @@
   background: $navbar-bg-color;
   box-shadow: 0px 3px 6px $nav-shadow-color;
   opacity: 1;
+  position: fixed;
+  top: 0;
+  z-index: 2;
   &__container {
     max-width: 130rem;
     margin: 0 auto;

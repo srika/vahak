@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 //components
 import CardHeader from "./CardHeader";
+import PersonalDetails from "./PersonalDetails";
 //images
 import { ReactComponent as Info } from "../../assets/info.svg";
 import { ReactComponent as Transport } from "../../assets/transport.svg";
 import { ReactComponent as Payment } from "../../assets/payment.svg";
 import { ReactComponent as Arrow } from "../../assets/arrow.svg";
+
 const Card = () => {
   const [showDetails, setShowDetails] = useState(true);
 
@@ -42,7 +44,11 @@ const Card = () => {
             </h4>
           </div>
         </div>
-        <p className="card-container__info__description">
+        <p
+          className={`card-container__info__description ${
+            !showDetails && "d-none"
+          }`}
+        >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
@@ -68,21 +74,7 @@ const Card = () => {
           <Arrow />
         </div>
       </div>
-      <div
-        className={`card-container__person-details ${!showDetails && "d-none"}`}
-      >
-        <div className="card-container__person-details__avatar">
-          <i className="far fa-user-circle fa-6x"></i>
-        </div>
-        <div className="card-container__person-details__info">
-          <h2 className="card-container__person-details__info__name">
-            Rohan Sharma
-          </h2>
-          <p className="card-container__person-details__info__location">
-            Bengaluru, Karnataka
-          </p>
-        </div>
-      </div>
+      <PersonalDetails />
     </div>
   );
 };
