@@ -1,0 +1,60 @@
+/*basic styling */
+.input-container {
+  position: relative;
+  width: 100%;
+
+  input {
+    width: 100%;
+    font-size: 14px;
+    border: solid 1px $border-1;
+    border-radius: 4px;
+    padding: 0 10px;
+    padding: 15px 0px 17px 14px;
+    transition: all 0.3s ease;
+    outline: none !important;
+  }
+
+  label {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    font-weight: 600;
+    left: 0;
+    color: $text-input-1;
+    padding: 15px 0px 17px 14px;
+    transition: all 0.3s ease;
+  }
+
+  input:focus {
+    border-color: $border-2;
+  }
+
+  input:not(:placeholder-shown) {
+    color: $text-input-2;
+    font-weight: bold;
+    font-size: 14px;
+    border-color: $border-1;
+  }
+
+  /* label goes up when input is focused OR filled */
+  input:focus ~ label,
+  input:not(:placeholder-shown) ~ label {
+    font-size: 12px;
+    padding: 1px 10px 4px 6px;
+    background: $bg-white;
+    color: $text-input-1;
+    margin-left: 14px;
+    transform: translateY(-10px);
+  }
+
+  /* label color on focused state */
+  input:focus ~ label {
+    color: $text-input-3;
+  }
+
+  /* label color on filled state */
+  input:not(:placeholder-shown) ~ label {
+    color: $text-input-1;
+    border-color: $border-1;
+  }
+}
