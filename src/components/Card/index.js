@@ -44,7 +44,11 @@ const Card = () => {
             </h4>
           </div>
         </div>
-        <p className="card-container__info__description">
+        <p
+          className={`card-container__info__description ${
+            !showDetails && "d-none"
+          }`}
+        >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
@@ -70,7 +74,7 @@ const Card = () => {
           <Arrow />
         </div>
       </div>
-      <PersonalDetails showDetails={showDetails} />
+      <PersonalDetails />
     </div>
   );
 };

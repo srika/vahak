@@ -1,10 +1,8 @@
 import React from "react";
 
-const PersonalDetails = ({ showDetails }) => {
+const PersonalDetails = () => {
   return (
-    <div
-      className={`card-container__person-details ${!showDetails && "d-none"}`}
-    >
+    <div className={"card-container__person-details"}>
       <div className="card-container__person-details__avatar">
         <i className="far fa-user-circle fa-6x"></i>
       </div>
